@@ -6,7 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
-## [Unreleased]
+## [09/16/2024]
+
+### Added
+
+- Designed a Music Playlist component
+- Designed a Playable Character component
+- Designed a Logic Gate component
 
 ## [2024.08.07]
 
