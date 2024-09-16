@@ -1,12 +1,11 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Name**: Lukas Coon
+- **Dot Number**: coon.192
+- **Due Date**: 9/16/2024
 
 ## Assignment Overview
 
-<!-- TODO: read the assignment overview then delete this comment -->
 
 The overall goal of the portfolio project is to have you design and implement
 your own OSU component. There are no limits to what you choose to design and
@@ -29,7 +28,6 @@ implement.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -52,7 +50,6 @@ to the tree diagram (you may remove this one as well):
 
 ## Assignment Learning Objectives
 
-<!-- TODO: read the assignment learning objectives then delete this comment -->
 
 Without learning objectives, there really is no clear reason why a particular
 assessment or activity exists. Therefore, to be completely transparent, here is
@@ -67,7 +64,6 @@ project. Specifically, students should be able to:
 
 ## Assignment Rubric: 10 Points
 
-<!-- TODO: read the assignment rubric then delete this comment -->
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -98,23 +94,20 @@ do good work.
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-<!-- TODO: briefly talk about your interests then delete this comment.
-Also, protip: you can preview what your response looks like by hitting
-the magnifying glass icon in the upper-right corner or pressing CTRL+K and
-then V. This kind of button combination is called a chord, for whatever
-reason -->
+I mostly just enjoy playing video games or simple things like watching movies or
+playing board games with friends. I'm not very much of an active person, so
+I'm likely happy with whatever doesnt require me to move too much. That's why I
+like the prospect of going into Computer Science or some form of Computer
+Engineering. Best case scenario I can get a job that relies more on mental than
+physical power. However, I do not have specific career goals in mind yet.
 
 ## Assignment
-
-<!-- TODO: read the assignment section then delete this comment -->
 
 As previously stated, you are tasked with brainstorming 3 possible components.
 To aid you in this process, we have provided [some example components][example-components]
 that may help you in your brainstorming. All of these components were made at
 some point by one of your peers, so you should feel confident that you can
 accomplish any of them.
-
-<!-- TODO: browse the list of possible projects then delete this comment -->
 
 There is no requirement that you use any of the components listed above.
 If you want to model something else, go for it! Very common early object
@@ -124,7 +117,6 @@ you're just brainstorming right now. You do not have to commit to anything.
 
 ### Example Component
 
-<!-- TODO: review this example component then delete this comment -->
 
 To help you brainstorm a few components, we've provided an example below of a
 component you already know well: NaturalNumber. We highly recommend that you
@@ -192,70 +184,115 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment -->
+- Component Design #1: Music Playlist
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - The purpose of this component is to create a playlist similar to something
+      you'd see from Spotify. The intent is to keep the kernel methods simple and
+      have the secondary methods be the more complicated versions of the kernels.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `void shuffle()`: Shuffles the playlist randomly
+    - `void addSong(string newSong)`: Adds the song given as `newSong` at the
+      end of the queue.
+    - `string removeSong(int pos)`: Removes the song at the given `pos` in queue,
+      and returns it as a string.
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - `void skip()`: Skips the song currently playing.
+    - `void clear()`: Clears the queue entirely.
+    - `void requeue()`: Removes the current song and places it at the end of the
+      queue.
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, I believe so, since it's a queue, alot of the components mutate the
+        original `this`.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I think so, but I'm unsure.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - If a clear queue counts, then yes, but I don't know.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, you can, since they're all just extensions of a kernel method. For
+        example, `clear()` is just `removeSong(int pos)` looped for all elements
+        in the queue.
 
 
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
+- Component Design #2: Playable Character
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - The purpose of this component is to hold stats or other information of
+      a hypothetical character in a video game. The intent is to have kernel
+      methods that can easily be used to perform various important actions (such
+      as checking HP or level) and have secondary methods that perform much
+      simpler actions to just "do this and that".
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `int level()`: Returns the level of `this` character.
+    - `int experience()`: Returns the experience gained on `this` character
+    - `string item()`: Returns the name of the item the character is holding.
+    - `int maxHP()`: Returns the maximum health points of `this` character.
+    - `int damageTaken()`: Returns total damage taken (mostly used for HP
+      calculations)
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - `int hpLeft()`: Returns the HP remaining of `this` character.
+    - `void heal()`: Fully heals `this` character.
+    - `void reset()`: Resets `this` character completely.
+    - `void removeItem()`: Throws the held item away.
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, since they're changing the character object.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I believe so. I'm not sure.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, since we'll need a constant baseline for a level and XP cap for
+        level up.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, for example you can use maxHP and damageTaken for hpLeft.
 
 
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
+- Component Design #3: Logic Gate
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - This one I likely won't do, but I wanted to envision the concept for it
+      because it seemed interesting to me. The purpose of this component is to
+      effectively run any given logic function and return the truth value after
+      running given values through "logic gates". The kernel methods are the
+      basic 3 logic functions, while the secondary methods are universal
+      functions that are built off of the kernel ones.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `boolean not(boolean x)`: Returns the reversed truth value of `x`.
+    - `boolean and(boolean x, boolean y)`: Returns true if both x and y are true,
+      and false otherwise.
+    - `boolean or(boolean x, boolean y)`: Returns true if x or y or both are
+      true, false otherwise.
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - `boolean xor(boolean x, boolean y)`: Returns true if x or y are true, and
+      false if both are true or both are false.
+    - `boolean nand(boolean x, boolean y)`: Returns false if both x and y are
+      true, true otherwise.
+    - `boolean nor(boolean x, boolean y)`: Returns true if and only if x and y
+      are both false.
+    - `boolean xnor(boolean x, boolean y)`: Returns true if and only if x and y
+      share the same truth value (if both true or if both false).
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - No, I don't believe so, since all of these create new values separate
+        from the originally passed objects and don't mutate anything.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I don't think so, but I'm not entirely sure.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, but I'm unsure what those would be.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, these are specifically designed so that the secondary methods are
+        universal logical functions built off of the three basic ones in the
+        kernel. For example, xor really is just an or func with a not func and
+        an and func. It's simpler to show it than to write it.
 
 ## Post-Assignment
 
@@ -263,8 +300,6 @@ The following sections detail everything that you should do once you've
 completed the assignment.
 
 ### Changelog
-
-<!-- TODO: create CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -303,8 +338,6 @@ of development.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
-
 If you have completed the assignment using this template, we recommend that
 you convert it to a PDF before submission. If you're not sure how, check out
 this [Markdown to PDF guide][markdown-to-pdf-guide]. However, PDFs should be
@@ -313,11 +346,7 @@ all your work is there before submitting. For future assignments, you will
 just be submitting a link to a pull request. This will be the only time
 you have to submit any PDFs.
 
-<!-- TODO: upload a PDF of this document and the CHANGELOG to Carmen then delete this comment -->
-
 ### Peer Review
-
-<!-- TODO: review the peer review guidelines then delete this comment -->
 
 Following the completion of this assignment, you will be assigned three
 students' component brainstorming assignments for review. Your job during the
@@ -344,7 +373,6 @@ If you'd like to give feedback for this assignment (or any assignment, really),
 make use of [this survey][survey]. Your feedback helps make assignments
 better for future students.
 
-<!-- TODO: follow the link to share your feedback then delete this comment -->
 
 [example-components]: https://therenegadecoder.com/code/the-never-ending-list-of-small-programming-project-ideas/
 [markdown-to-pdf-guide]: https://therenegadecoder.com/blog/how-to-convert-markdown-to-a-pdf-3-quick-solutions/
