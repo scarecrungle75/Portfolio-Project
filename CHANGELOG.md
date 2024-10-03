@@ -6,6 +6,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
+## [2024.10.03]
+
+### Added
+
+- Designed a proof of concept for Playable Character component
+
+### Updated
+
+- Changed design to include a gainExperience method
+- Also changed to include a pickUpItem method
+- Omitted "removeItem" due to time constraints.
+
+
 ## [2024.09.16]
 
 ### Added
